@@ -1,0 +1,318 @@
+-- import: fpm
+-- import: priyanka9634.github.io/templte/assets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- homepage:
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column homepage:
+optional ftd.color bg-color: $fpm.color.main.background.base
+background-color: $bg-color
+width: fill
+
+
+
+--- header:
+background:$fpm.color.glass.background.step-2
+
+
+
+--- container: ftd.main
+
+--- navbar:
+title:abd
+background: $fpm.color.main.background.base 
+
+--- ftd.row:
+margin-left:155
+margin-top:36
+
+--- search-btn:
+title:search
+--- container: ftd.main
+
+--- ftd.column:
+width:1202
+margin-left:155
+margin-right:155
+margin-top:17
+margin-bottom:84
+border-width: 1
+border-radius: 8
+border-color: $fpm.color.main.border-strong 
+
+
+--- sectiodn:
+git-name: Add a Code PR to complete this 
+--- sectiodn:
+git-name: Add a Code PR to complete this pair
+--- sectiodn:
+git-name: Add a Code PR to complete this pair
+--- sectiodn:
+git-name: Add a Code PR to complete this pair
+--- sectiodn:
+git-name: Add a Code PR to complete this pair
+
+
+
+
+-- ftd.column header:
+optional ftd.image-src site-logo: $assets.files.assets.images.fifthtry-logo.png
+string site-url: /
+optional ftd.image-src github-logo:
+optional ftd.image-src moon-logo:
+width:fill
+ftd.color background: $fpm.color.main.background.base 
+background-color: $background
+padding-top: 20
+padding-bottom: 20
+padding-left: 20
+padding-right: 20
+id:header-item
+
+
+--- ftd.row:
+width:fill
+id:main-row
+
+
+--- ftd.row: 
+width:fill
+
+
+--- ftd.image: 
+src:$site-logo
+height:30
+width:60
+padding:3
+
+
+--- container: main-row
+
+--- ftd.row:
+id:right-side-header
+padding-left:10
+margin-left:40
+
+--- ftd.image: 
+src:$site-logo
+height:30
+width:60
+padding:3
+move-left:40
+
+
+
+--- ftd.image: 
+src:$site-logo
+height:30
+width:60
+padding:3
+
+
+
+
+
+-- ftd.column navbar:
+caption title:
+optional ftd.image-src site-logo:
+string site-url: /
+optional ftd.image-src github-logo:
+optional ftd.image-src moon-logo:
+width:fill
+ftd.color background: $fpm.color.main.background.base 
+background-color: $background
+padding-vertical:34
+padding-left:36
+
+
+--- ftd.row:
+width:fill
+
+--- ftd.row:
+width:fill
+id:nav-right
+
+--- ftd.image: 
+src:$site-logo
+height:15
+width:15
+padding:10
+
+--- ftd.text: Orgname
+color: $fpm.color.main.text
+padding:10
+
+--- ftd.column:
+
+--- ftd.row:
+
+--- ftd.image: 
+src:$site-logo
+height:15
+width:15
+padding:10
+
+
+
+--- ftd.row:
+
+--- ftd.column:
+
+--- ftd.text: Orgname
+color: $fpm.color.main.text
+padding-left:10
+
+
+--- ftd.text: Orgname
+color: $fpm.color.main.text
+padding-left:10
+
+
+--- container: nav-right
+--- ftd.image: 
+src:$site-logo
+height:15
+width:15
+padding:10
+
+--- ftd.text: Orgname
+color: $fpm.color.main.text
+padding:10
+
+
+
+
+
+-- ftd.text search-btn:search
+caption title:
+role: $fpm.type.label-large
+width:876
+color: $fpm.color.main.error.base
+border-radius: 8
+padding-vertical: 14
+padding-horizontal: 28
+border-width: 1
+align:left
+border-color: $fpm.color.main.border-strong 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column sectiodn:
+optional ftd.image-src github-logo:
+optional ftd.image-src moon-logo:
+optional string git-name:
+optional string moon-name:
+border-color: $fpm.color.main.cta-secondary.text
+width: fill
+border-bottom: 1
+padding-horizontal:30
+
+
+
+--- ftd.row:
+width:fill
+id:jj
+
+---ftd.row:
+
+--- leftside:
+ git-name: $git-name
+
+
+--- container:jj
+
+--- ftd.row:
+align:right
+
+--- rightside:
+ git-name: $git-name
+
+
+-- ftd.column leftside:
+optional ftd.image-src github-logo:
+optional ftd.image-src moon-logo:
+optional string git-name:
+optional string moon-name:
+width:fill
+padding-vertical:20
+
+--- ftd.row:
+width:fill
+
+--- ftd.image: 
+src: $github-logo
+height: 15
+width: 15
+margin-right:5
+
+--- ftd.text: $git-name
+
+--- container: ftd.main
+
+--- ftd.row:
+margin-top:4
+
+--- ftd.image: 
+src:$github-logo
+height:15
+width:15
+margin-right:5
+
+--- ftd.text: $git-name
+
+
+
+-- ftd.column rightside:
+optional string git-name:
+
+  
+
+--- ftd.text:connect
+role: $fpm.type.label-large
+color: $fpm.color.main.error.base
+border-radius: 8
+padding-vertical: 8
+padding-horizontal: 16
+border-width: 1
+border-color: $fpm.color.main.border-strong 
+margin-top:20
