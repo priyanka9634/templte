@@ -1,0 +1,9 @@
+
+-- import: fpm
+
+
+
+-- ftd.column: 
+optional ftd.color bg-color: $fpm.color.main.background.base
+background-color: $bg-color
+--- ftd.text: jn

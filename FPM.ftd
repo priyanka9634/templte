@@ -2,5 +2,3 @@
 
 -- fpm.package: priyanka9634.github.io/templte
 zip: github.com/priyanka9634/firsttry-ftd/archive/refs/heads/main.zip
-
--- fpm.dependency: priyanka9634.github.io/templte/assets
