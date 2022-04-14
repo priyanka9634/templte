@@ -6,7 +6,7 @@
 -- fpm.font-display: $font-assets.fonts.Inter
 
 
--- ftd.font-size $copytext-lg:
+-- ftd.font-size copytext-lg:
 line-height: 20
 size: 16
 tracking: 0.5
