@@ -1,20 +1,20 @@
 -- import: priyanka9634.github.io/templte/assets
 -- import: fpm
 -- import: fifthtry.github.io/inter/assets as font-assets
--- import: priyanka9634.github.io/custom-typo as font
+
 
 -- fpm.font-display: $font-assets.fonts.Inter
 
 
--- ftd.font-size copy-tight-lg:
+-- ftd.font-size $copytext-lg:
 line-height: 20
 size: 16
 tracking: 0.5
 
--- ftd.type copy-tight: $fpm.font-display
-desktop: $copy-tight-lg
-mobile: $copy-tight-lg
-xl: $copy-tight-lg
+-- ftd.type copytext: $fpm.font-display
+desktop: $copytext-lg
+mobile: $copytext-lg
+xl: $copytext-lg
 weight: 700
 
 
