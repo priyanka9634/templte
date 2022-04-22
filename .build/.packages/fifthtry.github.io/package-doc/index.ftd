@@ -1,0 +1,86 @@
+-- import: fpm
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/package-doc/forest-theme as ft
+
+/-- fpm.theme-color: red
+
+-- ft.toc:
+$processor$: toc
+
+- Home: index.html
+- Docs: docs/
+
+-- ft.header-toc:
+$processor$: toc
+
+- Github: https://github.com/FifthTry/fpm-book/generate/
+
+
+-- ft.page-with-toc: Package for documentation
+toc: $ft.toc
+
+
+-- pd.package: Package Docs
+name: fifthtry.github.io/package-doc
+
+This package can be used for documenting other packages.
+
+
+-- ft.code: Add this to your FPM.ftd
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/package-doc
+
+
+-- ft.code: Then use the component:
+lang: ftd
+
+\-- import: fifthtry.github.io/package-doc as pd
+
+\-- pd.package: Package Docs
+name: fifthtry.github.io/package-doc
+
+
+
+
+
+
+
+
+
+-- pd.component: Package Page
+name: fifthtry.github.io/package-doc/pd.package
+
+Package documentation page should be powered by `package` component.
+
+This should be the first element in the page.
+
+
+-- pd.attribute: Title Of The Package
+name: title
+
+
+This is the title of the package being documented. This should be human readable
+name. This should be put in the caption.
+
+-- ft.code: How to specify component title
+lang: ftd
+
+\-- pd.package: Title Of The Package
+
+
+
+-- pd.attribute: Name Of The Package
+name: name
+
+The name of the package. This is the name that people use when importing the
+package:
+
+-- ft.code: How to specify component title
+lang: ftd
+
+\-- pd.package: Title Of The Component
+name: fifthtry.github.io/package-doc
+
+
+
