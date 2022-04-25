@@ -1,8 +1,0 @@
--- import: fpm
-
--- fpm.package: priyanka9634.github.io/templte
-zip: github.com/priyanka9634/firsttry-ftd/archive/refs/heads/main.zip
-
--- fpm.auto-import: priyanka9634.github.io/templte/assets
-
--- fpm.dependency: fifthtry.github.io/inter

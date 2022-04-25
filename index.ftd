@@ -536,9 +536,9 @@ border-wi:0
 outlines: $font.cta_primary_base
 button-name: $button-name
 
---- popup.modelbody:
+--- popup.model-body:
 sub-heading-main:  A healthy code always carry good Documentation
-sub-heading-secondary:Attach one for:
+sub-heading-secondary: Attach one for:
 code-logo: $assets.files.assets.images.rectangle.png
 code-text: #222  Code PR Name
 footer-text: My PR doesnt need a connection
@@ -559,7 +559,7 @@ width:916
 outlines: $font.cta_primary_base
 button-name: $button-name
 
---- popup.modelbody:
+--- popup.model-body:
 sub-heading-main:  A healthy code always carry good Documentation
 sub-heading-secondary:Attach one for:
 code-logo: $assets.files.assets.images.rectangle.png
@@ -592,7 +592,7 @@ width:614
 outlines: $font.shadow-box
 button-name: $button-name
 
---- popup.modelcontent:
+--- popup.model-content:
 sub-heading-main: A healthy code always carry good Documentation
 cta-text: search
 logo-text: #222  Code PR Name
@@ -630,7 +630,7 @@ outlines: $font.shadow-box
 width:614
 button-name: $button-name
 
---- popup.modelcontent:
+--- popup.model-content:
 sub-heading-main: A healthy code always carry good Documentation
 logo-text: #222  Code PR Name
 moon-logo: $assets.files.assets.images.icon-github.png
@@ -639,14 +639,6 @@ does not need any associated documentation
 
 This action should be used sparingly. It may be reviewed by your Manager,and will affect your organizations’ dev statistics
 
-/--- popup.confirmationcontent:
-sub-heading-main: #203 Code PR name
-sub-heading-secondary: #404 Doc PR name
-
-
-does not need any associated documentation.
-
-This action should be used sparingly. It may be reviewed by your Manager,and will affect your organizations’ dev statistics
 
 
 --- container: ftd.main
@@ -663,7 +655,7 @@ outlines: $font.shadow-box
 width:614
 button-name: $button-name
 
---- popup.modelcontent:
+--- popup.model-content:
 cta-text: search
 logo-text: #222  Code PR Name
 moon-logo: $assets.files.assets.images.icon-github.png

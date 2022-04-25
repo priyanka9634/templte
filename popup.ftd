@@ -63,15 +63,16 @@ dark: rgba(0, 0, 0, 0.9)
 
 --- container: col-id
 
---- modelbody:
+--- model-body:
 sub-heading-main: $sub-heading-main
 sub-heading-secondary: $sub-heading-secondary
 git-name: $git-name
 code-logo: $code-logo
 code-text: $code-text
+footer-text: $footer-text
 
 
---- modelcontent:
+--- model-content:
 sub-heading-main: $sub-heading-main
 sub-heading-secondary: $sub-heading-secondary
 body: $body
@@ -79,7 +80,7 @@ body: $body
 
 
 
--- ftd.column modelbody:
+-- ftd.column model-body:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src code-logo:
@@ -125,7 +126,7 @@ width: fill
 margin-top: 20
 width: fill
 
---- sectiodn:
+--- model-pr-items:
 icon-theme-mode: $section-items.icon-theme-mode
 logo-text: $section-items.logo-text
 button-name: $section-items.button-name
@@ -145,7 +146,7 @@ text-align: center
 color: $fpm.color.main.warning.base
 
 
--- ftd.row sectiodn:
+-- ftd.row model-pr-items:
 optional ftd.image-src icon-theme-mode: $assets.files.assets.images.rectangle.png
 string button-name:
 string logo-text:
@@ -172,34 +173,12 @@ logo-text: $logo-text
 
 --- ftd.row:
 if: $mouse-in
+padding-vertical:10
 
 --- button: connect
 button-bg: $font.cta_primary_base
 
 
--- ftd.column leftside:
-optional ftd.image-src moon-logo: $assets.files.assets.images.rectangle.png
-optional string logo-text:
-optional ftd.color button-color: $fpm.color.main.text
-width:fill
-padding-vertical:20
-
---- ftd.row:
-width: fill
-id: section-ccontainer
-spacing: 10
-
-
---- logo-with-text:
-moon-logo: $moon-logo
-logo-text: $logo-text
-
-
--- ftd.column rightside:
-optional string button-name:
-
---- button: connect
-button-bg: $font.cta_primary_base
 
 
 
@@ -227,7 +206,7 @@ padding-vertical: 14
 padding-horizontal: 28
 border-width: 1
 align:left
-placeholder: $cta-placeholder
+placeholder: $cta-text
 background-color: $fpm.color.main.background.base
 color: $fpm.color.main.error.base
 border-color: $fpm.color.main.border-strong 
@@ -260,7 +239,8 @@ border-color: $fpm.color.main.border-strong
 
 
 
--- ftd.column modelcontent:
+-- ftd.column model-content:
+optional string cta-placeholder:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src repo-code-logo: $assets.files.assets.images.repo-code.png
@@ -379,31 +359,25 @@ cta-text:search
 width:fill
 
 
+
 --- container: ftd.main
 
---- ftd.text : confirm
+--- ftd.row:
+margin-top: 20
 align: center
-role: $fpm.type.label-large
-ftd.color button-bg: $fpm.color.main.background.base
-ftd.color button-color: $fpm.color.main.error.base
-background-color: $font.cta_primary_base
-color: $fpm.color.main.background.base
-background-color if $MOUSE-IN: $font.cta_hover
-color if $MOUSE-IN: $fpm.color.main.error.base 
-border-radius: 8
-padding-vertical: 8
-padding-horizontal: 16
-border-width: 1
-border-color: $fpm.color.main.border-strong 
-margin-top:20
+
+--- button: confirm
+button-bg: $font.warning-text_base
+
+
 
 --- container: ftd.main
 
 --- ftd.text:
-role:
+padding-top: 24
 if: $footer-text is not null
 text: $footer-text
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 align: center
 white-space: nowrap
 
