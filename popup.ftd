@@ -36,14 +36,18 @@ optional ftd.image-src icon-theme-mode: $assets.files.assets.images.icon-moon.pn
 -- section-list: #123
 value: hello
 logo-text:#123 Some Doc PR
+icon-theme-mode: $assets.files.assets.images.icon-moon.png
 button-name: connect
 
 -- section-list: #123
 value: hello
 logo-text:#123 Some Doc PR
+icon-theme-mode: $assets.files.assets.images.icon-moon.png
 button-name: connect
+
 -- section-list: #123
 value: hello
+icon-theme-mode: $assets.files.assets.images.icon-moon.png
 logo-text:#123 Some Doc PR
 button-name: connect
 
@@ -58,6 +62,7 @@ dark: rgba(0, 0, 0, 0.9)
 
 
 --- container: col-id
+
 --- modelbody:
 sub-heading-main: $sub-heading-main
 sub-heading-secondary: $sub-heading-secondary
@@ -79,6 +84,7 @@ optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src code-logo:
 optional string code-text:
+optional string footer-text:
 optional string git-name:
 width:fill
 
@@ -87,45 +93,60 @@ width: fill
 role: $font.copy-relaxed
 color: $fpm.color.main.text
 padding-top:12
+
 --- ftd.text: $sub-heading-secondary
 width: fill
 role: $font.copy-relaxed
 color: $fpm.color.main.text
 padding-top:7
+margin-bottom: 27
 
---- leftside:
-button-color: $fpm.color.main.text-strong
-logo-text: $code-text
+--- ftd.row:
+margin-bottom: 27
+
+--- logo-with-text:
 moon-logo: $code-logo
+logo-text: $code-text
+ 
+
+--- container: ftd.main
+
+---ftd.row:
+margin-bottom: 27
+
 
 --- search-btn:
-title:search
-width: 876
+cta-text:search
+width: fill
 
+--- container: ftd.main
 
+--- ftd.column:
+margin-top: 20
+width: fill
 
 --- sectiodn:
+icon-theme-mode: $section-items.icon-theme-mode
 logo-text: $section-items.logo-text
 button-name: $section-items.button-name
 $loop$: $section-list as $section-items
 
---- ftd.column:
-width: fill
-align:center
-padding-top:30
-
+--- container: ftd.main
 
 --- ftd.row:
 align:center
 border-bottom: 1
 border-color: $font.warning-text_base
+margin-top:20
 
---- ftd.text:My PR doesnt need a connection
+--- ftd.text:
+text: $footer-text
 text-align: center
 color: $fpm.color.main.warning.base
 
 
--- ftd.column sectiodn:
+-- ftd.row sectiodn:
+optional ftd.image-src icon-theme-mode: $assets.files.assets.images.rectangle.png
 string button-name:
 string logo-text:
 boolean mouse-in: false
@@ -133,28 +154,27 @@ width: fill
 border-bottom: 1
 padding-horizontal:30
 padding-vertical:10
-
---- ftd.row:
-width:fill
-id:jj
 $on-mouse-enter$: $mouse-in = true
 $on-mouse-leave$: $mouse-in = false
 
----ftd.row:
-width: fill
 
---- leftside:
+--- ftd.row:
+width:fill
+padding-vertical: 20
+
+--- logo-with-text:
+moon-logo: $icon-theme-mode
 logo-text: $logo-text
  
 
 
---- container:jj
+--- container:ftd.main
 
 --- ftd.row:
 if: $mouse-in
 
---- rightside:
- button-name: $button-name
+--- button: connect
+button-bg: $font.cta_primary_base
 
 
 -- ftd.column leftside:
@@ -170,16 +190,9 @@ id: section-ccontainer
 spacing: 10
 
 
---- ftd.image: 
-src: $moon-logo
-margin-right: 5
-
---- ftd.text: $logo-text
-color: $button-color
-color if $MOUSE-IN: $fpm.color.main.text
-
-
-
+--- logo-with-text:
+moon-logo: $moon-logo
+logo-text: $logo-text
 
 
 -- ftd.column rightside:
@@ -203,8 +216,9 @@ button-bg: $font.cta_primary_base
 
 
 
--- ftd.input search-btn:search
-caption title:
+-- ftd.input search-btn:
+caption cta-text:
+optional string cta-placeholder:
 cursor: pointer
 optional string width: 1
 width: $width
@@ -213,13 +227,14 @@ padding-vertical: 14
 padding-horizontal: 28
 border-width: 1
 align:left
-placeholder: $title
+placeholder: $cta-placeholder
 background-color: $fpm.color.main.background.base
 color: $fpm.color.main.error.base
 border-color: $fpm.color.main.border-strong 
 
 
---- ftd.text: $title
+--- ftd.text:
+text: $cta-text
 role: $fpm.type.label-large
 color: $fpm.color.main.error.base
 
@@ -242,21 +257,25 @@ padding-vertical: 8
 padding-horizontal: 16
 border-width: 1
 border-color: $fpm.color.main.border-strong 
-margin-top:20
+
 
 
 -- ftd.column modelcontent:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
+optional ftd.image-src repo-code-logo: $assets.files.assets.images.repo-code.png
 optional ftd.image-src moon-logo: $assets.files.assets.images.icon9.png
+optional ftd.image-src moon-logos: $assets.files.assets.images.rectangle.png
+optional string logo-text: 
+optional string moon-logos-text: 
+optional string cta-text:
+optional string footer-text:
 body body:
 width:fill
 padding-horizontal: 42
 
-
-
-
 --- ftd.text: $sub-heading-main
+if: $sub-heading-main is not null
 text-align: center
 width: fill
 role: $font.copy-relaxed
@@ -265,6 +284,7 @@ padding-top:12
 
 
 --- ftd.column:
+if: $sub-heading-main is not null
 width: fill
 align: center
 padding-top:32
@@ -272,21 +292,75 @@ padding-bottom:11
 
 --- ftd.row:
 align: center
-spacing:5
 
-
---- ftd.image: 
-src: $moon-logo
-align:center
-
-
---- ftd.text: $sub-heading-secondary
-color: $fpm.color.main.text-strong
+--- logo-with-text:
+moon-logo: $moon-logo
+logo-text: $logo-text
 
 --- container: ftd.main
 
 --- ftd.row:
+align: center
+
+
+--- ftd.row:
+if: $sub-heading-main is  null
+width: fill
+id: section-container
+spacing: 10
+align: center
+
+
+--- ftd.column:
+align:center
+
+--- ftd.image: 
+src: $repo-code-logo
+
+--- container: section-container
+
+--- ftd.column:
+align: center
+id: image-text-container
+spacing: 10
+
+--- ftd.row:
+width:fill
+align: center
+spacing: 10
+
+
+--- logo-with-text:
+moon-logo: $moon-logo
+logo-text: $logo-text
+
+--- container: image-text-container
+
+--- ftd.row:
+width:fill
+align: center
+spacing: 10
+id:jkkk
+
+--- logo-with-text:
+moon-logo: $moon-logo
+logo-text: $logo-text
+
+
+--- container: ftd.main
+
+
+--- ftd.row:
 padding-vertical:12
+
+--- ftd.text: $sub-heading-secondary
+color: $fpm.color.main.text-strong
+role: $font.copyies
+
+--- container: ftd.main
+--- ftd.row:
+padding-vertical:12
+
 --- ftd.text:
 text: $body
 color: $fpm.color.main.text
@@ -300,21 +374,15 @@ padding-horizontal: 32
 margin-top:15
 
 --- search-btn:
-title:search
+if: $cta-text is not null
+cta-text:search
 width:fill
 
 
 --- container: ftd.main
 
---- ftd.column:
-width: fill
-align: center
-
-
---- ftd.row:
-align: center
-
 --- ftd.text : confirm
+align: center
 role: $fpm.type.label-large
 ftd.color button-bg: $fpm.color.main.background.base
 ftd.color button-color: $fpm.color.main.error.base
@@ -329,262 +397,34 @@ border-width: 1
 border-color: $fpm.color.main.border-strong 
 margin-top:20
 
+--- container: ftd.main
+
+--- ftd.text:
+if: $footer-text is not null
+text: $footer-text
+color: $fpm.color.main.text-strong
+align: center
+white-space: nowrap
 
 
--- ftd.column confirmationcontent:
-optional string sub-heading-main:
-optional string sub-heading-secondary:
-optional ftd.image-src open-close-logo: $assets.files.assets.images.icon9.png
-optional ftd.image-src rectangle-logo: $assets.files.assets.images.rectangle.png
-optional ftd.image-src repo-code-logo: $assets.files.assets.images.repo-code.png
-body body:
+
+
+
+
+
+-- ftd.row logo-with-text:
 width:fill
-padding-horizontal: 42
-
-
---- ftd.row:
-width: fill
-id: section-ccontainer
+optional ftd.image-src moon-logo:
+optional string logo-text:
 spacing: 10
-align: center
-
-
---- ftd.column:
-align:center
-
---- ftd.image: 
-src: $repo-code-logo
-
---- container: section-ccontainer
-
---- ftd.column:
-align: center
-id: klk
-spacing: 10
-
---- ftd.row:
-width:fill
-align: center
-spacing: 10
-id:jkkk
-
---- ftd.row:
-align: center
 
 
 --- ftd.image: 
-src: $open-close-logo
+src: $moon-logo
 height: 15
 width: 15
 
 
-
---- ftd.text: $sub-heading-main
+--- ftd.text: $logo-text
 color: $fpm.color.main.text-strong
 role: $font.footer-font
-
---- container: klk
---- ftd.row:
-width:fill
-align: center
-spacing: 10
-id:jkkk
-
---- ftd.row:
-align: center
-spacing: 5
-
---- ftd.image: 
-src: $rectangle-logo
-height: 15
-width: 15
-
-
---- ftd.text: $sub-heading-secondary
-color: $fpm.color.main.text-strong
-role: $font.copyies
-
-
---- container: ftd.main
-
-
---- ftd.row:
-align: center
-padding-top: 38
---- ftd.text:
-text: $body
-color: $fpm.color.main.text
-text-align: center
-
-
---- container: ftd.main
-
---- ftd.row:
-width: fill
-padding-horizontal: 32
-margin-top:15
-
---- search-btn:
-title:search
-width:fill
-
-
---- container: ftd.main
-
---- ftd.column:
-width: fill
-align: center
-
-
---- ftd.row:
-align: center
-
---- button: confirm
-button-bg: $font.warning-text_base
-
---- container: ftd.main 
---- ftd.column:
-width: fill
-align:center
-padding-top:30
-
-
---- ftd.row:
-align:center
-width: fill
-border-bottom: 1
-
---- ftd.text:Please ask the Dev/Documentor to come in sync if this is not the case
-text-align: center
-white-space: no-wrap
-color:  $fpm.color.main.text
-
-
-
--- ftd.column lastconfirmation:
-optional string sub-heading-main:
-optional string sub-heading-secondary:
-optional ftd.image-src open-close-logo: $assets.files.assets.images.icon9.png
-optional ftd.image-src rectangle-logo: $assets.files.assets.images.rectangle.png
-optional ftd.image-src repo-code-logo: $assets.files.assets.images.repo-code.png
-body body:
-width:fill
-padding-horizontal: 42
-
-
---- ftd.row:
-width: fill
-id: section-ccontainer
-spacing: 10
-align: center
-
-
---- ftd.column:
-align:center
-
---- ftd.image: 
-src: $repo-code-logo
-
---- container: section-ccontainer
-
---- ftd.column:
-align: center
-id: klk
-spacing: 10
-
---- ftd.row:
-width:fill
-align: center
-spacing: 10
-id:jkkk
-
---- ftd.row:
-align: center
-
-
---- ftd.image: 
-src: $open-close-logo
-height: 15
-width: 15
-
-
-
---- ftd.text: $sub-heading-main
-color: $fpm.color.main.text-strong
-role: $font.footer-font
-
---- container: klk
---- ftd.row:
-width:fill
-align: center
-spacing: 10
-id:jkkk
-
---- ftd.row:
-align: center
-spacing: 5
-
---- ftd.image: 
-src: $rectangle-logo
-height: 15
-width: 15
-
-
---- ftd.text: $sub-heading-secondary
-color: $fpm.color.main.text-strong
-role: $font.copyies
-
-
---- container: ftd.main
-
-
---- ftd.row:
-align: center
-padding-top: 38
---- ftd.text:
-text: $body
-color: $fpm.color.main.text
-text-align: center
-
-
---- container: ftd.main
-
---- ftd.row:
-width: fill
-padding-horizontal: 32
-margin-top:15
-
---- search-btn:
-title:search
-width:fill
-
-
---- container: ftd.main
-
---- ftd.column:
-width: fill
-align: center
-
-
---- ftd.row:
-align: center
-
---- button: confirm
-button-bg: $font.warning-text_base
-
---- container: ftd.main 
---- ftd.column:
-width: fill
-align:center
-padding-top:30
-
-
---- ftd.row:
-align:center
-width: fill
-border-bottom: 1
-
---- ftd.text:Please ask the Dev/Documentor to come in sync if this is not the case
-text-align: center
-white-space: no-wrap
-color:  $fpm.color.main.text
