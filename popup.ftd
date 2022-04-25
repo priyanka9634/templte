@@ -58,7 +58,7 @@ dark: rgba(0, 0, 0, 0.9)
 
 
 --- container: col-id
---- modelbody:
+--- model-body:
 sub-heading-main: $sub-heading-main
 sub-heading-secondary: $sub-heading-secondary
 git-name: $git-name
@@ -66,7 +66,7 @@ code-logo: $code-logo
 code-text: $code-text
 
 
---- modelcontent:
+--- model-content:
 sub-heading-main: $sub-heading-main
 sub-heading-secondary: $sub-heading-secondary
 body: $body
@@ -74,7 +74,7 @@ body: $body
 
 
 
--- ftd.column modelbody:
+-- ftd.column model-body:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src code-logo:
@@ -93,7 +93,7 @@ role: $font.copy-relaxed
 color: $fpm.color.main.text
 padding-top:7
 
---- leftside:
+--- model-pr-item:
 button-color: $fpm.color.main.text-strong
 logo-text: $code-text
 moon-logo: $code-logo
@@ -104,7 +104,7 @@ width: 876
 
 
 
---- sectiodn:
+--- section:
 logo-text: $section-items.logo-text
 button-name: $section-items.button-name
 $loop$: $section-list as $section-items
@@ -125,7 +125,7 @@ text-align: center
 color: $fpm.color.main.warning.base
 
 
--- ftd.column sectiodn:
+-- ftd.column section:
 string button-name:
 string logo-text:
 boolean mouse-in: false
@@ -143,7 +143,7 @@ $on-mouse-leave$: $mouse-in = false
 ---ftd.row:
 width: fill
 
---- leftside:
+--- model-pr-item:
 logo-text: $logo-text
  
 
@@ -153,11 +153,11 @@ logo-text: $logo-text
 --- ftd.row:
 if: $mouse-in
 
---- rightside:
+--- model-pr-cta:
  button-name: $button-name
 
 
--- ftd.column leftside:
+-- ftd.column model-pr-item:
 optional ftd.image-src moon-logo: $assets.files.assets.images.rectangle.png
 optional string logo-text:
 optional ftd.color button-color: $fpm.color.main.text
@@ -182,7 +182,7 @@ color if $MOUSE-IN: $fpm.color.main.text
 
 
 
--- ftd.column rightside:
+-- ftd.column model-pr-cta:
 optional string button-name:
 
 --- button: connect
@@ -245,7 +245,7 @@ border-color: $fpm.color.main.border-strong
 margin-top:20
 
 
--- ftd.column modelcontent:
+-- ftd.column model-content:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src moon-logo: $assets.files.assets.images.icon9.png
