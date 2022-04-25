@@ -400,6 +400,7 @@ margin-top:20
 --- container: ftd.main
 
 --- ftd.text:
+role:
 if: $footer-text is not null
 text: $footer-text
 color: $fpm.color.main.text-strong

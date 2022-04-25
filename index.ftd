@@ -541,6 +541,7 @@ sub-heading-main:  A healthy code always carry good Documentation
 sub-heading-secondary:Attach one for:
 code-logo: $assets.files.assets.images.rectangle.png
 code-text: #222  Code PR Name
+footer-text: My PR doesnt need a connection
 
 
 --- container: ftd.main
@@ -593,8 +594,9 @@ button-name: $button-name
 
 --- popup.modelcontent:
 sub-heading-main: A healthy code always carry good Documentation
-sub-heading-secondary: Attach one for:
-
+cta-text: search
+logo-text: #222  Code PR Name
+moon-logo: $assets.files.assets.images.rectangle.png
 
 does not need any associated documentation.
 
@@ -628,7 +630,16 @@ outlines: $font.shadow-box
 width:614
 button-name: $button-name
 
---- popup.confirmationcontent:
+--- popup.modelcontent:
+sub-heading-main: A healthy code always carry good Documentation
+logo-text: #222  Code PR Name
+moon-logo: $assets.files.assets.images.icon-github.png
+does not need any associated documentation
+
+
+This action should be used sparingly. It may be reviewed by your Manager,and will affect your organizations’ dev statistics
+
+/--- popup.confirmationcontent:
 sub-heading-main: #203 Code PR name
 sub-heading-secondary: #404 Doc PR name
 
@@ -652,10 +663,14 @@ outlines: $font.shadow-box
 width:614
 button-name: $button-name
 
---- popup.lastconfirmation:
-sub-heading-main: #203 Code PR name
-sub-heading-secondary: #404 Doc PR name
-
+--- popup.modelcontent:
+cta-text: search
+logo-text: #222  Code PR Name
+moon-logo: $assets.files.assets.images.icon-github.png
+moon-logos-text:#203 Code PR name
+moon-logo: $assets.files.assets.images.rectangle.png
+repo-code-logo: $assets.files.assets.images.repo-code.png
+footer-text:Note: Please ask the Dev/Documentor to come in sync if this is not the case
 
 does not need any associated documentation.
 
