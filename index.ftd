@@ -169,7 +169,7 @@ border-width: 1
 border-radius: 8
 border-color: $fpm.color.main.border-strong 
 
---- sectiodn:
+--- section:
 icon-2-mode: $section-items.icon-2-mode
 icon-3-mode: $section-items.icon-3-mode
 icon-1-text:$section-items.icon-1-text
@@ -347,7 +347,7 @@ border-color: $fpm.color.main.error.base
 
 
 
--- ftd.column sectiodn:
+-- ftd.column section:
 string button-name:
 string icon-1-text:
 ftd.image-src icon-2-mode: 
@@ -368,7 +368,7 @@ id:jj
 ---ftd.row:
 width: fill
 
---- leftside:
+--- model-pr-item:
  button-name: $button-name
  icon-1-text: $icon-1-text
  icon-2-text: $icon-2-text
@@ -381,12 +381,12 @@ width: fill
 --- ftd.row:
 
 
---- rightside:
+--- model-pr-cta:
  button-name: $button-name
  index: $index
 
 
--- ftd.column leftside:
+-- ftd.column model-pr-item:
 optional ftd.image-src moon-logo: $assets.files.assets.images.repo-code.png
 optional ftd.image-src rectangle-logo: $assets.files.assets.images.rectangle.png
 optional ftd.image-src open-close-logo: $assets.files.assets.images.icon9.png
@@ -512,7 +512,7 @@ color if $index == 2: $fpm.color.main.warning.base
 
 
 
--- ftd.column rightside:
+-- ftd.column model-pr-cta:
 optional ftd.image-src site-logo: $assets.files.assets.images.repo-code.png
 optional ftd.image-src back-logo: $assets.files.assets.images.back-logo.png
 optional ftd.image-src cross-logo: $assets.files.assets.images.Union.png
