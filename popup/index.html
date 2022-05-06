@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8"><base href="/templte/">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <title>popup.ftd</title>
+        <title>Login to Github</title>
         <script type="ftd" id="ftd-data">{
   "fpm#theme-color": {
     "value": null,
@@ -21,9 +21,7 @@
   },
   "ftd#device": {
     "value": "desktop",
-    "dependencies": {
-      "$value#kind$": []
-    }
+    "dependencies": {}
   },
   "ftd#follow-system-dark-mode": {
     "value": true,
@@ -36,6 +34,68 @@
   "ftd#system-dark-mode": {
     "value": false,
     "dependencies": {}
+  },
+  "priyanka9634.github.io/templte/popup#icon-github@0,0,1,1": {
+    "value": {
+      "$kind$": "light",
+      "dark": "/templte/-/priyanka9634.github.io/templte/assets/images/icon-github.svg",
+      "light": "/templte/-/priyanka9634.github.io/templte/assets/images/icon-github.svg"
+    },
+    "dependencies": {
+      "0,0,1,1,1": [
+        {
+          "condition": null,
+          "dependency_type": "Value",
+          "parameters": {},
+          "remaining": null
+        }
+      ]
+    }
+  },
+  "priyanka9634.github.io/templte/popup#sign-in@0,0,1,1": {
+    "value": "sign up with",
+    "dependencies": {
+      "0,0,1,1,0": [
+        {
+          "condition": null,
+          "dependency_type": "Value",
+          "parameters": {},
+          "remaining": null
+        }
+      ]
+    }
+  },
+  "priyanka9634.github.io/templte/popup#sub-heading-main@0": {
+    "value": "click below to login with github",
+    "dependencies": {
+      "0,0,1,0": [
+        {
+          "condition": null,
+          "dependency_type": "Value",
+          "parameters": {},
+          "remaining": null
+        },
+        {
+          "condition": "$IsNotNull$",
+          "dependency_type": "Visible",
+          "parameters": {},
+          "remaining": null
+        }
+      ]
+    }
+  },
+  "priyanka9634.github.io/templte/popup#title@0": {
+    "value": "Login to Github",
+    "dependencies": {
+      "0,0,0,0": [
+        {
+          "condition": null,
+          "dependency_type": "Value",
+          "parameters": {},
+          "remaining": null
+        }
+      ]
+    }
   }
 }</script>
         <script type="ftd" id="ftd-external-children">{}</script>
@@ -146,12 +206,12 @@ ul {
 }
 
 .ft_md a {
-    color: #0047b4;
+    color: #6a89b8;
     text-decoration: none;
 }
 
 .ft_md a:visited {
-    color: #632ec4;
+    color: #9475cb;
 }
 
 .ft_md a:hover {
@@ -200,10 +260,184 @@ body.fpm-dark .ft_md a code {
 
 body.fpm-dark .ft_md a:visited code {
     color: #a27de7;
-}</style>
+}
+
+.b_0 {
+    background-color: rgba(0,0,0,0.8)
+}
+
+
+
+.b_1 {
+    background-color: rgba(24,24,27,1)
+}
+
+
+
+.b_2 {
+    border-color: rgba(150,98,32,1)
+}
+
+
+
+.b_7 {
+    background-color: rgba(45,212,191,1)
+}
+
+
+
+body.fpm-dark .b_0 {
+    background-color: rgba(0,0,0,0.8)
+}
+
+
+
+body.fpm-dark .b_1 {
+    background-color: rgba(24,24,27,1)
+}
+
+
+
+body.fpm-dark .b_2 {
+    border-color: rgba(150,98,32,1)
+}
+
+
+
+body.fpm-dark .b_7 {
+    background-color: rgba(45,212,191,1)
+}
+
+
+
+body.fpm-dark .c_3 {
+    color: rgba(255,255,255,1)
+}
+
+
+
+body.fpm-dark .c_5 {
+    color: rgba(168,162,158,1)
+}
+
+
+
+body.fpm-dark .c_8 {
+    color: rgba(20,20,20,1)
+}
+
+
+
+body.ftd-mobile .fffll_4 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 32px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 44px
+}
+
+
+
+body.ftd-mobile .fffll_6 {
+    font-family: sans-serif;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 24px
+}
+
+
+
+body.ftd-mobile .fffll_9 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 16px;
+font-weight: 700;
+letter-spacing: 0px;
+line-height: 16px
+}
+
+
+
+body.ftd-xl .fffll_4 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 32px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 44px
+}
+
+
+
+body.ftd-xl .fffll_6 {
+    font-family: sans-serif;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 24px
+}
+
+
+
+body.ftd-xl .fffll_9 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 16px;
+font-weight: 700;
+letter-spacing: 0px;
+line-height: 16px
+}
+
+
+
+.c_3 {
+    color: rgba(255,255,255,1)
+}
+
+
+
+.c_5 {
+    color: rgba(168,162,158,1)
+}
+
+
+
+.c_8 {
+    color: rgba(20,20,20,1)
+}
+
+
+
+.fffll_4 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 32px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 44px
+}
+
+
+
+.fffll_6 {
+    font-family: sans-serif;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0px;
+line-height: 24px
+}
+
+
+
+.fffll_9 {
+    font-family: fifthtry-github-io-inter-Inter;
+font-size: 16px;
+font-weight: 700;
+letter-spacing: 0px;
+line-height: 16px
+}
+
+</style>
     </head>
     <body>
-        <div data-id="main:root" style="align-items: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; white-space: initial; width: 100%" ></div><style>
+        <div data-id="main:root" style="align-items: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; text-decoration: none; white-space: initial; width: 100%" ><div data-id="0:main" style="align-items: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; left: 0px; position: fixed; text-decoration: none; top: 0px; white-space: initial; width: 100%; z-index: 100" class="b_0"><div data-id="model-contete:0,0:main" style="align-items: flex-start; border-radius: 8px; border-style: solid; border-top-width: 3px !important; border-width: 1px; box-shadow: 3px 4px 4px 1px rgba(150,98,32,1); box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 35px; padding-left: 42px; padding-right: 42px; padding-top: 35px; text-decoration: none; transform: translate(400px, 200px) ; white-space: initial; width: 614px" class="b_1 b_2"><div data-id="0,0,0:main" style="align-items: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 90px; text-decoration: none; white-space: initial; width: 100%" ><div data-id="0,0,0,0:main" style="border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; text-align: center; text-decoration: none; white-space: initial; width: 100%" class="c_3 ft_md fffll_4">Login to Github</div></div><div data-id="col-id:0,0,1:main" style="align-items: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; text-decoration: none; white-space: initial; width: 100%" ><div data-id="0,0,1,0:main" style="border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; padding-bottom: 32px; text-align: center; text-decoration: none; white-space: initial; width: 100%" class="c_5 ft_md fffll_6">click below to login with github</div><a data-id="0,0,1,1:main" data-spacing="margin-left:4px" href="https://github.com/apps/continuous-documentation" style="align-items: flex-start; align-self: center; border-radius: 4px; border-style: solid; border-width: 0px; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; margin-left: auto; margin-right: auto; padding-bottom: 12px; padding-left: 16px; padding-right: 16px; padding-top: 12px; text-decoration: none; white-space: initial" class="b_7 c_8"><div data-id="0,0,1,1,0:main" style="align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; margin-bottom: auto; margin-top: auto; padding-top: 2px; text-align: center; text-decoration: none; white-space: nowrap" class="c_8 ft_md fffll_9">sign up with</div><img alt="" data-id="0,0,1,1,1:main" src="/templte/-/priyanka9634.github.io/templte/assets/images/icon-github.svg" style="border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; margin-left: 4px; text-decoration: none; white-space: initial"></a></div></div></div></div><style>
 
 @font-face { unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 font-style: normal;
@@ -931,6 +1165,10 @@ let ftd_utils = {
     handle_action: function (id, target_variable, value, data, ftd_external_children) {
         var styles_edited = [];
         let visibility_change = false;
+        let current_value = ftd_utils.get_data_value(data, target_variable);
+        if (current_value === value) {
+            return;
+        }
         handle_action_(id, target_variable, value, data, ftd_external_children, styles_edited, visibility_change);
 
         function handle_action_(id, target_variable, value, data, ftd_external_children, styles_edited, visibility_change) {
@@ -1006,20 +1244,31 @@ let ftd_utils = {
                                     let variable = param_val["$variable$"];
                                     let dependent = data[variable].value;
                                     let dependent_dependencies = data[variable].dependencies[node];
+                                    let call = false;
                                     for (const d in dependent_dependencies) {
                                         if (dependent_dependencies[d].dependency_type !== "Style"
                                             || !dependent_dependencies[d].parameters[parameter]) {
                                             continue;
                                         }
                                         if (dependent_dependencies[d].parameters[parameter].value.reference === target) {
+                                            if (ftd_utils.is_equal_condition(dependent, dependent_dependencies[d].condition)
+                                                && !ftd_utils.deepEqual(dependent_dependencies[d].parameters[parameter].value.value, full_value)) {
+                                                call = true;
+                                            }
                                             dependent_dependencies[d].parameters[parameter].value.value = full_value;
                                         }
                                         if (!!dependent_dependencies[d].parameters[parameter].default && dependent_dependencies[d].parameters[parameter].default.reference === target) {
+                                            if (ftd_utils.is_equal_condition(dependent, dependent_dependencies[d].condition)
+                                                && !ftd_utils.deepEqual(dependent_dependencies[d].parameters[parameter].default.value, full_value)) {
+                                                call = true;
+                                            }
                                             dependent_dependencies[d].parameters[parameter].default.value = full_value;
                                         }
                                     }
                                     data[variable].dependencies[node] = dependent_dependencies;
-                                    handle_action_(id, variable, dependent, data, ftd_external_children, styles_edited, visibility_change);
+                                    if (call) {
+                                        handle_action_(id, variable, dependent, data, ftd_external_children, styles_edited, visibility_change);
+                                    }
                                 }
                             }
                         } else if (ftd_utils.is_equal_condition(full_value, json_dependency.condition)) {
@@ -1028,14 +1277,25 @@ let ftd_utils = {
                                     continue;
                                 }
                                 let value = json_dependency.parameters[parameter].value.value;
+                                let call = false;
                                 if (dependency === "$value#kind$") {
+                                    let get_value = ftd_utils.get_data_value(data, parameter + ".$kind$");
+                                    if (!ftd_utils.deepEqual(value, get_value)) {
+                                        call = true;
+                                    }
                                     ftd_utils.set_data_value(data, parameter + ".$kind$", value);
                                 }
                                 if (dependency === "$value$") {
+                                    let get_value = ftd_utils.get_data_value(data, parameter);
+                                    if (!ftd_utils.deepEqual(value, get_value)) {
+                                        call = true;
+                                    }
                                     ftd_utils.set_data_value(data, parameter, value);
                                 }
                                 let parameter_value = ftd_utils.get_data_value(data, parameter);
-                                handle_action_(id, parameter, parameter_value, data, ftd_external_children, styles_edited, visibility_change)
+                                if (call) {
+                                    handle_action_(id, parameter, parameter_value, data, ftd_external_children, styles_edited, visibility_change);
+                                }
                             }
                         } else {
                             for (const parameter in json_dependency.parameters) {
@@ -1043,17 +1303,28 @@ let ftd_utils = {
                                     continue;
                                 }
                                 let default_value = json_dependency.parameters[parameter].default;
+                                let call = false;
                                 if (default_value === null) {
                                     continue;
                                 }
                                 if (dependency === "$value#kind$") {
+                                    let get_value = ftd_utils.get_data_value(data, parameter + ".$kind$");
+                                    if (!ftd_utils.deepEqual(default_value.value, get_value)) {
+                                        call = true;
+                                    }
                                     ftd_utils.set_data_value(data, parameter + ".$kind$", default_value.value);
                                 }
                                 if (dependency === "$value$") {
+                                    let get_value = ftd_utils.get_data_value(data, parameter);
+                                    if (!ftd_utils.deepEqual(default_value.value, get_value)) {
+                                        call = true;
+                                    }
                                     ftd_utils.set_data_value(data, parameter, default_value.value);
                                 }
                                 let parameter_value = ftd_utils.get_data_value(data, parameter);
-                                handle_action_(id, parameter, parameter_value, data, ftd_external_children, styles_edited, visibility_change)
+                                if (call) {
+                                    handle_action_(id, parameter, parameter_value, data, ftd_external_children, styles_edited, visibility_change);
+                                }
                             }
                         }
                     } else if (json_dependency.dependency_type === "Style") {
@@ -1068,6 +1339,7 @@ let ftd_utils = {
                             }
                             if (!!set.length) {
                                 let style_attr = Object.keys(json_dependency.parameters).filter(w => w !== "dependents")[0];
+                                let call = false;
                                 for (const idx in set) {
                                     let dependent = data[set[idx]].value;
                                     let dependent_dependencies = data[set[idx]].dependencies[dependency];
@@ -1076,10 +1348,17 @@ let ftd_utils = {
                                             || !dependent_dependencies[d].parameters[style_attr]) {
                                             continue;
                                         }
+                                        let current_value = dependent_dependencies[d].parameters[style_attr].default.value;
+                                        if (ftd_utils.is_equal_condition(dependent, dependent_dependencies[d].condition)
+                                            && !ftd_utils.deepEqual(current_value, full_value)) {
+                                            call = true;
+                                        }
                                         dependent_dependencies[d].parameters[style_attr].default.value = full_value;
                                     }
                                     data[set[idx]].dependencies[dependency] = dependent_dependencies;
-                                    handle_action_(id, set[idx], dependent, data, ftd_external_children, styles_edited, visibility_change);
+                                    if (call) {
+                                        handle_action_(id, set[idx], dependent, data, ftd_external_children, styles_edited, visibility_change);
+                                    }
                                 }
                                 continue;
                             }
@@ -1493,6 +1772,8 @@ window.ftd.post_init = function () {
     const COOKIE_DARK_MODE = "dark";
     const COOKIE_LIGHT_MODE = "light";
     const DARK_MODE_CLASS = "fpm-dark";
+    const MOBILE_CLASS = "ftd-mobile";
+    const XL_CLASS = "ftd-xl";
     const FTD_DEVICE = "ftd#device";
     const FTD_MOBILE_BREAKPOINT = "ftd#mobile-breakpoint";
     const FTD_DESKTOP_BREAKPOINT = "ftd#desktop-breakpoint";
@@ -1538,10 +1819,24 @@ window.ftd.post_init = function () {
         let mobile_breakpoint = window.ftd.get_value("main", FTD_MOBILE_BREAKPOINT);
         let desktop_breakpoint = window.ftd.get_value("main", FTD_DESKTOP_BREAKPOINT);
         if (width <= mobile_breakpoint) {
+            document.body.classList.add(MOBILE_CLASS);
+            if (document.body.classList.contains(XL_CLASS)) {
+                document.body.classList.remove(XL_CLASS);
+            }
             return "mobile";
         }
         if (width > desktop_breakpoint) {
-            return "xxl";
+            document.body.classList.add(XL_CLASS);
+            if (document.body.classList.contains(MOBILE_CLASS)) {
+                document.body.classList.remove(MOBILE_CLASS);
+            }
+            return "xl";
+        }
+        if (document.body.classList.contains(MOBILE_CLASS)) {
+            document.body.classList.remove(MOBILE_CLASS);
+        }
+        if (document.body.classList.contains(XL_CLASS)) {
+            document.body.classList.remove(XL_CLASS);
         }
         return "desktop";
     }
@@ -1631,7 +1926,7 @@ window.ftd.post_init = function () {
             document.body.style.backgroundColor = FTD_THEME_COLOR;
             set_meta(THEME_COLOR_META, theme_color);
         } else {
-            document.html.style.backgroundColor = FTD_THEME_COLOR;
+            document.body.style.backgroundColor = FTD_THEME_COLOR;
             delete_meta(THEME_COLOR_META);
         }
     }
@@ -1675,7 +1970,7 @@ window.ftd.post_init = function () {
     }
 
     function update_dark_mode() {
-        let current_dark_mode_cookie = get_cookie(DARK_MODE_COOKIE, COOKIE_SYSTEM_LIGHT);
+        let current_dark_mode_cookie = get_cookie(DARK_MODE_COOKIE, COOKIE_LIGHT_MODE);
 
         switch (current_dark_mode_cookie) {
             case COOKIE_SYSTEM_LIGHT:
