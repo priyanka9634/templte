@@ -12,6 +12,9 @@
 if: $verify == true
 
 
+
+
+
 -- login-content: Login to Github
 sub-heading-main:  click below to login with github
 cta-text: sign up with

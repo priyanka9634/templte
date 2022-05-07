@@ -762,7 +762,7 @@ color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.image:
-src: $cross-logo
+src: $assets.files.assets.images.Union.png
 /$on-click-outside$: $open-1 = true
 $on-click$: $open-1 = false
 

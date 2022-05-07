@@ -217,6 +217,7 @@ color: $fpm.color.main.error.base
 -- ftd.text button:
 caption title:
 text: $title
+align: center
 role: $font.button
 ftd.color button-bg: $fpm.color.main.background.base
 ftd.color button-color: $fpm.color.main.error.base
@@ -225,7 +226,7 @@ color: $fpm.color.main.background.base
 background-color if $MOUSE-IN: $font.cta_hover
 color if $MOUSE-IN: $fpm.color.main.error.base 
 border-radius: 8
-padding-vertical: 8
+padding-vertical: 12
 padding-horizontal: 16
 border-width: 1
 border-color: $fpm.color.main.border-strong 
@@ -507,3 +508,4 @@ color: $fpm.color.main.background.step-1
 
 --- ftd.image:
 src: $icon-github
+
