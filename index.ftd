@@ -47,7 +47,6 @@ $processor$: get-data
 
 null
 
-
 -- record available-repos-for-mapping-data:
 integer id:
 string repo-full-name:
@@ -300,17 +299,19 @@ background-color: $fpm.color.main.cta-primary.base
 
 
 
+
+
+
 -- ftd.row available-loop:
 optional ftd.image-src button-name:
 optional ftd.image-src doc-logo: $assets.files.assets.images.orgname.png
 width: fill
 border-bottom: 1
-border-color:  $fpm.color.main.text
+border-color: $fpm.color.main.text
 padding-horizontal:30
 padding-vertical: 20
 string children:
 integer index:
-
 
 --- ftd.row:
 width:fill
@@ -319,7 +320,6 @@ spacing: 4
 
 --- ftd.image:
 src: $doc-logo
-
 
 --- ftd.text: $children
 link: $children
@@ -330,10 +330,10 @@ role: $fpm.type.label-small
 
 --- ftd.row:
 
---- overview: connect
+--- overview: Connect
 heading-name: $children
 
---- both-buttonn:
+--- both-button:
 repo-name: $children
 title-right: code-repo
 title-left: documentation-repo
@@ -345,7 +345,7 @@ heading-name-left: Attach Code repository
 
 
 
--- ftd.row both-buttonn:
+-- ftd.row both-button:
 width: fill
 caption title-right:
 caption title-left:
@@ -361,13 +361,19 @@ about-repo: $about-repo-right
 repo-name: $repo-name
 heading-name: $heading-name-left
 
-
 --- container: ftd.main
 
 --- code-repo: $title-left
 about-repo: $about-repo-left
 repo-name: $repo-name
 heading-name: $heading-name-right
+
+
+
+
+
+
+
 
 
 
@@ -380,7 +386,7 @@ optional ftd.image-src cross-logo: $assets.files.assets.images.Union.png
 open: true
 append-at: col-id
 
---- ftd.text : $title
+--- ftd.text: $title
 role: $font.button
 background-color: $fpm.color.main.cta-primary.base
 color: $fpm.color.main.background.base
@@ -393,7 +399,7 @@ border-width: 1
 border-color: $fpm.color.main.border-strong
 $on-click$: $open-1 = true
 
---- ftd.column :
+--- ftd.column:
 z-index: 100
 anchor: window
 top: 0
@@ -425,12 +431,10 @@ border-top: 1
 border-radius: 8
 border-color: $fpm.color.main.cta-primary.base
 shadow-color: $fpm.color.main.cta-primary.base
-id: model-contete
-
+id: model-content
 
 --- ftd.row:
 width: fill
-
 
 --- ftd.text: $heading-name
 role: $fpm.type.heading-medium
@@ -441,7 +445,7 @@ width: fill
 src: $cross-logo
 $on-click$: $open-1 = false
 
---- container: model-contete
+--- container: model-content
 
 --- ftd.text: This repo is a:
 role: $fpm.type.copy-relaxed
@@ -449,7 +453,7 @@ color: $fpm.color.main.text
 width: fill
 
 
---- container: model-contete
+--- container: model-content
 
 --- ftd.row:
 width: fill
@@ -465,13 +469,11 @@ string heading-name:
 string repo-name:
 boolean open-1: false
 optional integer border-wi: 0
-string heading-name:
 optional ftd.image-src cross-logo: $assets.files.assets.images.Union.png
 open: true
 append-at: col-id
 
-
---- ftd.text : $button-name
+--- ftd.text: $button-name
 role: $fpm.type.label-big
 ftd.color button-bg: $fpm.color.main.background.base
 ftd.color button-color: $fpm.color.main.error.base
@@ -486,9 +488,9 @@ border-width: 1
 border-color: $fpm.color.main.border-strong
 margin-top:20
 $on-click$: $open-1 = true
+$on-click$: $abc = $repo-name
 
-
---- ftd.column :
+--- ftd.column:
 z-index: 100
 anchor: window
 top: 0
@@ -499,8 +501,6 @@ background-color: $font.backkk
 id: kjlk
 if: $open-1
 
-
-
 --- ftd.column:
 background-color: $fpm.color.main.background.base
 width: 650
@@ -508,7 +508,7 @@ border-width: 1
 padding-vertical: 12
 padding-horizontal: 24
 boolean mouse-in: false
-border-color: $fpm.color.main.border-strong 
+border-color: $fpm.color.main.border-strong
 id: col-id
 shadow-offset-x: 3
 shadow-offset-y: 4
@@ -522,7 +522,6 @@ spacing:  24
 --- ftd.row:
 width:fill
 
-
 --- ftd.text: $heading-name
 role: $fpm.type.heading-medium
 color: $fpm.color.main.text-strong
@@ -533,10 +532,7 @@ src: $assets.files.assets.images.Union.png
 /$on-click-outside$: $open-1 = true
 $on-click$: $open-1 = false
 
---- ftd.text:
-text: $abc
 --- container: col-id
-
 
 --- ftd.text: $repo-name
 role: $fpm.type.copy-relaxed
@@ -545,10 +541,8 @@ width: fill
 
 --- container: col-id
 
-
 --- ftd.row:
 width: fill
-
 
 --- ftd.text: $about-repo
 role: $fpm.type.copy-relaxed
@@ -558,8 +552,6 @@ width: fill
 --- search-btn: search
 available-repos-for-mapping: $available-repos-for-mapping
 
-
-
 --- container: col-id
 
 --- ftd.row:
@@ -567,9 +559,15 @@ align: center
 margin-top: $fpm.space.space-4
 margin-bottom: $fpm.space.space-4
 
-
---- popup.button: attach
+--- popup.button: Attach
 button-bg: $fpm.color.main.cta-primary.base
+
+
+
+
+
+
+
 
 
 -- ftd.row search-btn:
@@ -588,8 +586,8 @@ color: $fpm.color.main.text
 border-radius: 8
 padding-vertical: 14
 padding-horizontal: 28
-border-width: 1 
-placeholder:$abc
+border-width: 1
+placeholder: $abc
 background-color: $fpm.color.main.background.base
 border-color: $fpm.color.main.text
 
