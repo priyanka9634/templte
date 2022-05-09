@@ -1,9 +1,9 @@
 -- import: fpm
 
--- fpm.package: priyanka9634.github.io/templte
+-- fpm.package: templates-ftd
 zip: github.com/priyanka9634/firsttry-ftd/archive/refs/heads/main.zip
 
--- fpm.auto-import: priyanka9634.github.io/templte/assets
+-- fpm.auto-import: templates-ftd/assets
 
 -- fpm.dependency: fifthtry.github.io/inter
 -- fpm.font: Octicon

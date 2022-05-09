@@ -1,10 +1,10 @@
 -- import: fpm
--- import: priyanka9634.github.io/templte/assets
+-- import: templates-ftd/assets
 -- import: fifthtry.github.io/inter/assets as font-assets
--- import: priyanka9634.github.io/templte/custom-typo as font
+-- import: templates-ftd/custom-typo as font
 -- fpm.font-display: $font-assets.fonts.Inter
 
--- import: priyanka9634.github.io/templte/popup as popup
+-- import: templates-ftd/popup as popup
 
 
 

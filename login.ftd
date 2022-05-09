@@ -1,29 +1,31 @@
 -- import: fpm
--- import: priyanka9634.github.io/templte/assets
+-- import: templates-ftd/assets
 -- import: fifthtry.github.io/inter/assets as font-assets
--- import: priyanka9634.github.io/templte/custom-typo as font
+-- import: templates-ftd/custom-typo as font
 -- fpm.font-display: $font-assets.fonts.Inter
 
--- boolean is-authenticated: true
+/-- boolean is-authenticated: true
 
--- boolean verify: false
+/-- boolean verify: false
 
--- is-authenticated: false
+/-- is-authenticated: false
 if: $verify == true
 
 
 
 
 
--- login-content: Login to Github
+/-- login-content: Login to Github
 sub-heading-main:  click below to login with github
 cta-text: sign up with
+url: https://github.com/apps/continuous-documentation
 
 
 -- ftd.column login-content :
 optional caption title:
 optional string sub-heading-main: 
 optional string cta-text:
+string url:
 z-index: 100
 anchor: parent
 top: 0
@@ -76,7 +78,6 @@ width: fill
 id: col-id
 padding-bottom: 12
 
-
 --- ftd.text: $sub-heading-main
 if: $sub-heading-main is not null
 text-align: center
@@ -87,6 +88,12 @@ padding-bottom: 32
 
 --- github-button:
 sign-in: $cta-text
+link: $url
+
+
+
+
+
 
 
 -- ftd.row github-button:
@@ -94,14 +101,14 @@ boolean is-authenticated: false
 optional string sign-in: 
 optional string github-cta:
 optional string width:
-optional ftd.image-src icon-github: $assets.files.assets.images.icon-github.svg
-optional string link: https://github.com/apps/continuous-documentation
+ftd.image-src icon-github: $assets.files.assets.images.icon-github.svg
+string link: https://github.com/apps/continuous-documentation
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-3
 color: $fpm.color.main.background.step-1
 background-color: $fpm.color.main.cta-primary.base
 border-radius: 4
-$on-click$: $verify = true
+/$on-click$: $verify = true
 width: $width
 spacing: 4
 cursor: pointer

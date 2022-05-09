@@ -1,11 +1,11 @@
 -- import: fpm
--- import: priyanka9634.github.io/templte/assets
+-- import: templates-ftd/assets
 -- import: fifthtry.github.io/inter/assets as font-assets
--- import: priyanka9634.github.io/templte/custom-typo as font
+-- import: templates-ftd/custom-typo as font
 -- fpm.font-display: $font-assets.fonts.Inter
--- import: priyanka9634.github.io/templte/pull as pull
--- import: priyanka9634.github.io/templte/popup as popup
--- import: priyanka9634.github.io/templte/login as login
+-- import: templates-ftd/pull as pull
+-- import: templates-ftd/popup as popup
+-- import: templates-ftd/login as login
 
 
 -- integer selected: 1
@@ -37,93 +37,97 @@ mobile: $octicon-fs
 xl: $octicon-fs
 weight: 700
 
--- record available-repos-for-mapping:
-integer index:
+
+-- boolean is-authenticated: false
+$processor$: get-data
+
+
+-- optional string github-login-url:
+$processor$: get-data
+
+
+-- record available-repos-for-mapping-data:
+integer id:
 string repo-full-name:
+string get-url:
+
+
+-- available-repos-for-mapping-data list available-repos-for-mapping:
+$processor$: get-data
+
+[
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/fpm-sample/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/fpm-sample",
+    "id": 3
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/fpm-version-app/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/fpm-version-app",
+    "id": 4
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/ftd-play/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/ftd-play",
+    "id": 5
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/ftd.dev/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/ftd.dev",
+    "id": 6
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/hindi-dictionary/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/hindi-dictionary",
+    "id": 7
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand",
+    "id": 8
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand-gu/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand-gu",
+    "id": 9
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand-hi/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand-hi",
+    "id": 10
+  }
+]
+
 
 
 -- record code-repo-data:
-optional caption repo-name:
 optional string repo-full-name:
 optional string get-url:
 
 
--- record doc-repo-data:
-optional caption repo-name:
+-- record documentation-repo-data:
 optional string repo-full-name:
 optional string get-url:
 
 -- record all-repo-map:
 code-repo-data code-repo:
-doc-repo-data doc-repo:
-
--- available-repos-for-mapping list available-repos-for-mapping-data:
-
--- available-repos-for-mapping-data:
-index: 1
-repo-full-name: abc
-
--- available-repos-for-mapping-data:
-index: 2
-repo-full-name: xyz
-
--- available-repos-for-mapping-data:
-index: 3
-repo-full-name: abc
-
--- available-repos-for-mapping-data:
-index: 4
-repo-full-name: xyz
-
--- available-repos-for-mapping-data:
-index: 5
-repo-full-name: abc
-
--- available-repos-for-mapping-data:
-index: 6
-repo-full-name: xyz
-
+documentation-repo-data documentation-repo:
 
 -- all-repo-map list kkk:
 $processor$: get-data
 
-[{
-"code-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"cr",
-	"get-url":"kk"
-},
-  
-"doc-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"dr",
-	"get-url":"kk"
-}
-} ,{
-"code-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"cr",
-	"get-url":"kk"
-},
-  
-"doc-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"dr",
-	"get-url":"kk"
-}
-} ,{
-"code-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"cr",
-	"get-url":"kk"
-},
-  
-"doc-repo": {
-	"repo-name": "jj",
-	"repo-full-name" :"dr",
-	"get-url":"kk"
-}
-} ]
+[
+  {
+    "code-repo": {
+      "get-url": "https://github.com/Arpita-Jaiswal/django-on-heroku/pulls/",
+      "repo-full-name": "Arpita-Jaiswal/django-on-heroku"
+    },
+    "documentation-repo": {
+      "get-url": "https://github.com/Arpita-Jaiswal/blog/pulls/",
+      "repo-full-name": "Arpita-Jaiswal/blog"
+    }
+  }
+]
 
 
 
@@ -146,27 +150,21 @@ $processor$: get-data
 
 
 
-
 -- ftd.column homepage:
 optional ftd.color bg-color: $fpm.color.main.background.base
 background-color: $bg-color
 width: fill
 
-
 --- pull.header:
-background:$fpm.color.glass.background.step-2
-
-
-
+background: $fpm.color.glass.background.step-2
 
 --- container: ftd.main
 
-
-
 --- login.login-content: Login to Github
-sub-heading-main:  click below to login with github
+sub-heading-main: Click below to login with github
 cta-text: sign up with
-if: $login.is-authenticated
+url: $github-login-url
+if: not $is-authenticated
 
 --- container: ftd.main
 
@@ -183,9 +181,6 @@ id: section-conatiner
 logo: $assets.files.assets.images.pull-request.png
 logo-text: Connections
  
-
-
-
 --- pull.search-btn:
 title: search
 
@@ -200,14 +195,10 @@ border-width: 1
 border-radius: 8
 border-color: $fpm.color.main.border-strong 
 
-
-
 --- mapping-loop:
-doc-repo:$obj.doc-repo
+documentation-repo: $obj.documentation-repo
 code-repo: $obj.code-repo
 $loop$:$kkk as $obj
-
-
 
 --- container: section-conatiner
 
@@ -222,12 +213,10 @@ border-width: 1
 border-radius: 8
 border-color: $fpm.color.main.border-strong 
 
-
-
 --- available-loop:
-index: $obj.index
+index: $obj.id
 children: $obj.repo-full-name
-$loop$: $available-repos-for-mapping-data as $obj
+$loop$: $available-repos-for-mapping as $obj
 
 
 
@@ -246,7 +235,7 @@ border-color:  $fpm.color.main.text
 padding-horizontal:30
 padding-vertical: 20
 code-repo-data code-repo:
-code-repo-data doc-repo:
+code-repo-data documentation-repo:
 
 --- ftd.column:
 width: fill
@@ -291,8 +280,8 @@ src: $assets.files.assets.images.lower-rect.png
 padding-top: 4
 src: $assets.files.assets.images.rectangle-white.png
 
---- ftd.text: $doc-repo.repo-full-name
-link: $doc-repo.get-url
+--- ftd.text: $documentation-repo.repo-full-name
+link: $documentation-repo.get-url
 color: $fpm.color.main.text
 role: $fpm.type.label-small
 
@@ -318,7 +307,7 @@ border-color:  $fpm.color.main.text
 padding-horizontal:30
 padding-vertical: 20
 string children:
-integer index :
+integer index:
 
 
 --- ftd.row:
@@ -327,15 +316,16 @@ margin-top: 8
 spacing: 4
 
 --- ftd.image: 
-src:$doc-logo
+src: $doc-logo
 
 
 --- ftd.text: $children
-link:  $children
+link: $children
 color: $fpm.color.main.text
 role: $fpm.type.label-small
 
 --- container: ftd.main
+
 --- ftd.row:
 
 --- overview: connect
@@ -343,8 +333,8 @@ heading-name: $children
 
 --- both-buttonn: 
 repo-name: $children
-title-right:code-repo
-title-left:doc-repo
+title-right: code-repo
+title-left: documentation-repo
 about-repo-left: Code Repository:
 about-repo-right: Documentation Repository:
 heading-name-right: Attach Documentation repository
@@ -564,7 +554,7 @@ color: $fpm.color.main.text
 width: fill
 
 --- search-btn: search
-available-repos-for-mapping-data : $available-repos-for-mapping-data
+available-repos-for-mapping: $available-repos-for-mapping
 
 
 
@@ -581,7 +571,7 @@ button-bg: $fpm.color.main.cta-primary.base
 
 
 -- ftd.row search-btn:
-available-repos-for-mapping list available-repos-for-mapping-data:
+available-repos-for-mapping-data list available-repos-for-mapping:
 caption title:
 boolean open: false
 $on-click$: toggle $open
@@ -602,7 +592,7 @@ background-color: $fpm.color.main.background.base
 border-color: $fpm.color.main.text
 
 --- ftd.text: ﹀
-if: $available-repos-for-mapping-data is not empty
+if: $available-repos-for-mapping is not empty
 color: $fpm.color.main.text
 position: center
 move-right: -20
@@ -617,10 +607,10 @@ left: 0
 
 --- show-children:
 if: $open
-if: $available-repos-for-mapping-data is not empty
-index: $obj.index
+if: $available-repos-for-mapping is not empty
+index: $obj.id
 children: $obj.repo-full-name
-$loop$: $available-repos-for-mapping-data as $obj
+$loop$: $available-repos-for-mapping as $obj
 
 
 
