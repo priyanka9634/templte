@@ -246,18 +246,13 @@ id: left-side
 spacing: 4
 padding-top: 4
 
-
 --- ftd.image:
 padding-top: 8
 src: $assets.files.assets.images.lower-rectangle.png
 
-
-
 --- ftd.image:
 padding-top: 4
 src: $assets.files.assets.images.icon9.png
-
-
 
 --- ftd.text: $code-repo.repo-full-name
 link: $code-repo.get-url
@@ -266,7 +261,6 @@ role: $fpm.type.label-small
 
 --- container: left-side
 
-
 --- ftd.row:
 spacing: 4
 padding-top: 4
@@ -274,8 +268,6 @@ padding-top: 4
 --- ftd.image:
 padding-top: 8
 src: $assets.files.assets.images.lower-rect.png
-
-
 
 --- ftd.image:
 padding-top: 4
@@ -304,7 +296,7 @@ background-color: $fpm.color.main.cta-primary.base
 
 -- ftd.row available-loop:
 optional ftd.image-src button-name:
-optional ftd.image-src doc-logo: $assets.files.assets.images.orgname.png
+ftd.image-src doc-logo: $assets.files.assets.images.orgname.png
 width: fill
 border-bottom: 1
 border-color: $fpm.color.main.text
@@ -314,7 +306,7 @@ string children:
 integer index:
 
 --- ftd.row:
-width:fill
+width: fill
 margin-top: 8
 spacing: 4
 
@@ -407,9 +399,7 @@ left: 0
 width: percent 100
 height: percent 100
 background-color: $font.backkk
-id: kjlk
 if: $open-1
-
 
 --- ftd.column:
 background-color: $fpm.color.main.background.base
@@ -452,13 +442,17 @@ role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 width: fill
 
-
 --- container: model-content
 
 --- ftd.row:
 width: fill
 id: col-id
 open: true
+
+
+
+
+
 
 
 
@@ -498,7 +492,6 @@ left: 0
 width: percent 100
 height: percent 100
 background-color: $font.backkk
-id: kjlk
 if: $open-1
 
 --- ftd.column:
