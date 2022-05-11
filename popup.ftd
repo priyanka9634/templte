@@ -3,8 +3,8 @@
 -- import: fifthtry.github.io/inter/assets as font-assets
 -- import: templates-ftd/custom-typo as font
 -- fpm.font-display: $font-assets.fonts.Inter
+-- import: templates-ftd/config as config
 
--- import:  templates-ftd/config as datas
 
 
 -- record tc:
@@ -57,13 +57,6 @@ dark: rgba(0, 0, 0, 0.9)
 
 --- container: col-id
 
---- model-body:
-sub-heading-main: $sub-heading-main
-sub-heading-secondary: $sub-heading-secondary
-git-name: $git-name
-code-logo: $code-logo
-code-text: $code-text
-footer-text: $footer-text
 
 
 --- model-content:
@@ -75,12 +68,13 @@ body: $body
 
 
 -- ftd.column model-body:
+config.documentation-pr list documentation-pr-mapping:
 optional string sub-heading-main:
 optional string sub-heading-secondary:
 optional ftd.image-src code-logo:
-optional string code-text:
 optional string footer-text:
 optional string git-name:
+optional string code-text:
 width:fill
 
 --- ftd.text: $sub-heading-main
@@ -120,11 +114,12 @@ width: fill
 margin-top: 20
 width: fill
 
---- model-pr-items:
-icon-theme-mode: $section-items.icon-theme-mode
-logo-text: $section-items.logo-text
-button-name: $section-items.button-name
-$loop$: $section-list as $section-items
+--- documentation-pr:
+icon-theme-mode: $assets.files.assets.images.rectangle.png
+button-name: Connect
+pr-name: $obj.repo-full-name
+$loop$: $config.documentation-pr-mapping as $obj
+
 
 --- container: ftd.main
 
@@ -140,13 +135,14 @@ text-align: center
 color: $fpm.color.main.warning.base
 
 
--- ftd.row model-pr-items:
+-- ftd.row documentation-pr:
 optional ftd.image-src icon-theme-mode: $assets.files.assets.images.rectangle.png
 string button-name:
-string logo-text:
+string pr-name:
 boolean mouse-in: false
 width: fill
 border-bottom: 1
+border-color: $fpm.color.main.text
 padding-horizontal:30
 padding-vertical:10
 $on-mouse-enter$: $mouse-in = true
@@ -156,11 +152,19 @@ $on-mouse-leave$: $mouse-in = false
 --- ftd.row:
 width:fill
 padding-vertical: 20
+spacing: 8
 
---- logo-with-text:
-logo: $icon-theme-mode
-logo-text: $logo-text
- 
+--- ftd.image: 
+padding-top: $fpm.space.space-2
+src: $icon-theme-mode
+height: 16
+width: auto
+
+
+--- ftd.text: $pr-name
+color: $fpm.color.main.text
+role: $fpm.type.copy-relaxed
+
 
 
 --- container:ftd.main
@@ -169,7 +173,7 @@ logo-text: $logo-text
 if: $mouse-in
 padding-vertical:10
 
---- button: connect
+--- button: $button-name
 button-bg: $font.cta_primary_base
 
 
@@ -318,7 +322,7 @@ id:jkkk
 
 --- logo-with-text:
 logo: $moon-logo
-logo-text: $logo-text
+logo-text: $moon-logos-text
 
 
 --- container: ftd.main
@@ -391,13 +395,13 @@ spacing: 10
 --- ftd.image: 
 padding-top: $fpm.space.space-2
 src: $logo
-height: 24
+height: 16
 width: auto
 
 
 --- ftd.text: $logo-text
 color: $fpm.color.main.text-strong
-role: $fpm.type.heading-small
+role: $fpm.type.copy-relaxed
 
 
 

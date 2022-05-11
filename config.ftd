@@ -1,0 +1,243 @@
+-- import: fpm
+
+
+-- boolean is-authenticated: false
+$processor$: get-data
+
+
+-- optional string github-login-url:
+$processor$: get-data
+
+null
+
+-- record available-repos-for-mapping-data:
+integer id:
+string repo-full-name:
+string get-url:
+
+
+-- available-repos-for-mapping-data list available-repos-for-mapping:
+$processor$: get-data
+[
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/fpm-sample/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/fpm-sample",
+    "id": 3
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/fpm-version-app/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/fpm-version-app",
+    "id": 4
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/ftd-play/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/ftd-play",
+    "id": 5
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/ftd.dev/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/ftd.dev",
+    "id": 6
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/hindi-dictionary/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/hindi-dictionary",
+    "id": 7
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand",
+    "id": 8
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand-gu/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand-gu",
+    "id": 9
+  },
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/vivekanand-hi/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/vivekanand-hi",
+    "id": 10
+  }
+]
+
+
+
+-- record code-repo-data:
+optional string repo-full-name:
+optional string get-url:
+
+
+-- record documentation-repo-data:
+optional string repo-full-name:
+optional string get-url:
+
+-- record all-repo-map-data:
+code-repo-data code-repo:
+documentation-repo-data documentation-repo:
+
+-- all-repo-map-data list all-repo-map:
+$processor$: get-data
+[
+  {
+    "code-repo": {
+      "get-url": "https://github.com/Arpita-Jaiswal/django-on-heroku/pulls/",
+      "repo-full-name": "Arpita-Jaiswal/django-on-heroku"
+    },
+    "documentation-repo": {
+      "get-url": "https://github.com/Arpita-Jaiswal/blog/pulls/",
+      "repo-full-name": "Arpita-Jaiswal/blog"
+    }
+  }
+]
+
+
+
+
+
+
+
+
+
+-- record code-pull-request-data:
+integer pr-number:
+string pr-title:
+
+
+
+
+-- record documentation-pull-request-data:
+integer pr-number:
+string pr-title:
+
+
+
+
+
+-- record open-prs-data:
+string pull-request-status:
+string get-pull-request-status-display:
+optional code-pull-request-data code-pull-request:
+optional documentation-pull-request-data documentation-pull-request:
+string approver-info:
+string pull-request-status-display:
+
+
+
+
+
+-- record pull-request-owner:
+string owner-account-name:
+string code-repo-full-name:
+string documentation-repo-full-name:
+open-prs-data list open-prs:
+
+-- pull-request-owner pull-request:
+$processor$: get-data
+{
+    "owner-account-name":"arpita",
+    "code-repo-full-name":"xyz",
+    "documentation-repo-full-name":"abc",
+    "open-prs":[
+    {
+    "pull-request-status":"NOT_CONNECTED",
+    "get-pull-request-status-display":"aa",
+    "code-pull-request":
+    {
+    "pr-number": 1, 
+    "pr-title": "Create README.md"
+    },
+    "documentation-pull-request":
+    {
+    "pr-number": 2, 
+    "pr-title": "Create README.md"
+    },
+    "approver-info":"vvv",
+    "pull-request-status-display":"not connected"
+    },
+     {
+    "pull-request-status":"MANUALLY_APPROVED",
+    "get-pull-request-status-display":"aa",
+    "code-pull-request":
+    {
+    "pr-number": 1, 
+    "pr-title": "Create README.md"
+    },
+    "documentation-pull-request":  {
+    "pr-number": 2, 
+    "pr-title": "Create README.md"
+    },
+    "approver-info":"vvv",
+    "pull-request-status-display":"manually approved"
+    },
+     {
+    "pull-request-status":"APPROVED",
+    "get-pull-request-status-display":"aa",
+    "code-pull-request":
+    {
+    "pr-number": 1, 
+    "pr-title": "Create README.md"
+    },
+    "documentation-pull-request":
+    {
+    "pr-number": 2, 
+    "pr-title": "Create README.md"
+    },
+    "approver-info":"vvv",
+    "pull-request-status-display":"approved"
+    },
+     {
+    "pull-request-status":"NOT_CONNECTED",
+    "get-pull-request-status-display":"aa",
+    "code-pull-request":
+    {
+    "pr-number": 1, 
+    "pr-title": "Create README.md"
+    },
+    "documentation-pull-request":
+    {
+    "pr-number": 2, 
+    "pr-title": "Create README.md"
+    },
+    "approver-info":"vvv",
+    "pull-request-status-display":"not connected"
+    },
+     {
+    "pull-request-status":"NOT_CONNECTED",
+    "get-pull-request-status-display":"aa",
+    "code-pull-request":
+    {
+    "pr-number": 1, 
+    "pr-title": "Create README.md"
+    },
+    "documentation-pull-request":
+    {
+    "pr-number": 2, 
+    "pr-title": "Create README.md"
+    },
+    "approver-info":"vvv",
+    "pull-request-status-display":"not connected"
+    }]
+}
+
+
+
+
+
+-- record documentation-pr:
+integer id:
+string repo-full-name:
+string get-url:
+
+
+-- documentation-pr list documentation-pr-mapping:
+$processor$: get-data
+[
+  {
+    "get-url": "https://github.com/Arpita-Jaiswal/fpm-sample/pulls/",
+    "repo-full-name": "Arpita-Jaiswal/fpm-sample",
+    "id": 3
+  }
+]
+
+
