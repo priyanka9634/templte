@@ -32,10 +32,10 @@ background: $fpm.color.glass.background.step-2
 
 
 
-/--- login.login-content: Login to Github
+--- login.login-content: Login to Github
 sub-heading-main:  click below to login with github
 cta-text: sign up with
-url: $github-login-url
+url: $config.github-login-url
 if: not $config.is-authenticated
 
 --- container: ftd.main
