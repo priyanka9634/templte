@@ -1,24 +1,7 @@
 -- import: fpm
 -- import: templates-ftd/assets
--- import: fifthtry.github.io/inter/assets as font-assets
 -- import: templates-ftd/custom-typo as font
--- fpm.font-display: $font-assets.fonts.Inter
 
-/-- boolean is-authenticated: true
-
-/-- boolean verify: false
-
-/-- is-authenticated: false
-if: $verify == true
-
-
-
-
-
-/-- login-content: Login to Github
-sub-heading-main:  click below to login with github
-cta-text: sign up with
-url: https://github.com/apps/continuous-documentation
 
 
 -- ftd.column login-content :
@@ -60,15 +43,12 @@ shadow-color: $fpm.color.main.warning.text
 padding-horizontal: 42
 id: model-contete
 
---- ftd.row:
-width:fill
-padding-bottom: 90
-
 --- ftd.text: $title
 text-align: center
 role: $fpm.type.heading-medium
 color: $fpm.color.main.text-strong
 width: fill
+padding-bottom: 90
 
 
 --- container: model-contete

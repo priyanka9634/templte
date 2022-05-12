@@ -22,10 +22,8 @@ width: fill
 
 
 
---- header:
+--- lib.header:
 background:$fpm.color.glass.background.step-2
-
-
 
 
 --- ftd.column:
@@ -41,8 +39,6 @@ id:main-section
 padding-top:32
 width:fill
 
---- ftd.row:
-width: fill
 
 --- lib.search-btn:
 title: search
@@ -60,63 +56,17 @@ border-width: 1
 border-radius: 8
 border-color: $fpm.color.main.border-strong 
 
-
 --- sections:
 pull-request: $config.pull-request
 
 
 
-
-
-
-
-
-
--- ftd.column header:
-optional ftd.image-src site-logo: $assets.files.assets.images.logo-fifthtry-dark.svg
-optional ftd.image-src icon-github: $assets.files.assets.images.icon-github.svg
-string site-url: /
-width:fill
-ftd.color background: $fpm.color.main.background.base 
-background-color: $background
-id:header-item
-padding-horizontal:32
-
-
---- ftd.row:
-width:fill
-id:main-row
-
-
---- ftd.row: 
-width:fill
-padding-vertical:24
-
-
---- ftd.image: 
-src:$site-logo
-
-
-
---- container: main-row
-
---- ftd.row:
-id:right-side-header
-padding-vertical:28
-spacing:32
-
-
-
---- ftd.image: 
-src:$icon-github
-
-
 -- ftd.row navbar:
-optional ftd.image-src code-repo-logo:$assets.files.assets.images.repo-code.png
-optional ftd.image-src pull-logo:$assets.files.assets.images.pull-request.png
-optional string code-text: Code Repo
-optional string doc-text: Doc Repo
-optional string pull-text: Pull requests
+ftd.image-src code-repo-logo:$assets.files.assets.images.repo-code.png
+ftd.image-src pull-logo:$assets.files.assets.images.pull-request.png
+string code-text: Code Repo
+string doc-text: Doc Repo
+string pull-text: Pull requests
 width: fill
 align: center
 
@@ -136,8 +86,6 @@ margin-top:8
 spacing:7
 
 --- logo-text: $code-text
-
-
 
 --- logo-text: $doc-text
 
@@ -165,20 +113,6 @@ caption title:
 text: $title
 ftd.color text-color: $fpm.color.glass.text-strong
 color: $text-color
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -218,10 +152,10 @@ $loop$: $config.pull-request.open-prs as $obj
 -- ftd.column leftside:
 string pull-request-status-display:
 integer code-pull-request-pr-number:
+optional integer documentation-pull-request-pr-number:
+optional string documentation-pull-request-pr-title:
 string code-pull-request-pr-title:
 optional string pull-request-status:
-optional string code-pull-request:
-optional string documentation-pull-request:
 optional ftd.image-src moon-logo: $assets.files.assets.images.repo-code.png
 optional ftd.image-src rectangle-logo: $assets.files.assets.images.rectangle.png
 optional ftd.image-src open-close-logo: $assets.files.assets.images.icon9.png
@@ -232,7 +166,6 @@ optional string button-name:
 optional ftd.color text-color: 
 color: $text-color
 width: fill
-padding-vertical: 20
 
 
 --- ftd.row:
@@ -357,6 +290,7 @@ string model-title:
 boolean open-1: false
 
 --- lib.overview: $button-name
+outlines: $fpm.color.main.cta-primary.base
 anchor: window
 repo-full-name: $model-title
 
@@ -407,9 +341,8 @@ code-pull-request-pr-title: $code-pull-request.pr-title
 
 --- ftd.row:
 
-
-
 --- lib.overview:
+outlines: $fpm.color.main.cta-primary.base
 repo-full-name:Attach Documentation
 anchor: window
 button-name: Connect
@@ -448,6 +381,7 @@ code-pull-request-pr-title: $code-pull-request.pr-title
 
 
 --- lib.overview:
+outlines: $fpm.color.main.warning.border
 text-align: center
 repo-full-name:Are you sure
 anchor: window
@@ -485,7 +419,8 @@ text-color: $fpm.color.main.text-strong
 pull-request-status-display: $pull-request-status-display
 code-pull-request-pr-number: $code-pull-request.pr-number
 code-pull-request-pr-title: $code-pull-request.pr-title
-
+documentation-pull-request-pr-number: $documentation-pull-request.pr-number
+documentation-pull-request-pr-title: $documentation-pull-request.pr-title
 --- container: not-connected-conatiner
 
 --- ftd.row:

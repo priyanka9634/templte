@@ -1,13 +1,10 @@
 -- import: fpm
 -- import: templates-ftd/assets
--- import: fifthtry.github.io/inter/assets as font-assets
 -- import: templates-ftd/custom-typo as font
--- import: templates-ftd/pull as pull
--- import: templates-ftd/popup as popup
 -- import: templates-ftd/login as login
 -- import: templates-ftd/library as lib
 -- import: templates-ftd/config as config
--- fpm.font-display: $font-assets.fonts.Inter
+
 
 
 
@@ -24,11 +21,8 @@ optional ftd.color bg-color: $fpm.color.main.background.base
 background-color: $bg-color
 width: fill
 
---- pull.header:
+--- lib.header:
 background: $fpm.color.glass.background.step-2
-
---- container: ftd.main
-
 
 
 

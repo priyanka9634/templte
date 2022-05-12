@@ -1,8 +1,7 @@
 -- import: fpm
--- import: fifthtry.github.io/inter/assets as font-assets
 -- import: templates-ftd/custom-typo as font
--- fpm.font-display: $font-assets.fonts.Inter
 -- import: templates-ftd/config as config
+
 
 -- boolean open-vaa: false
 
@@ -36,6 +35,31 @@ xl: $octicon-fs
 weight: 700
 
 
+-- ftd.row header:
+optional ftd.image-src site-logo: $assets.files.assets.images.logo-fifthtry-dark.svg
+optional ftd.image-src icon-github: $assets.files.assets.images.icon-github.svg
+string site-url: /
+width:fill
+ftd.color background: $fpm.color.main.background.base 
+background-color: $background
+padding-horizontal:32
+
+--- ftd.column: 
+width:fill
+padding-vertical:24
+
+--- ftd.image: 
+src:$site-logo
+
+--- container: ftd.main
+
+--- ftd.column:
+padding-vertical:28
+spacing:32
+
+
+--- ftd.image: 
+src:$icon-github
 
 
 -- ftd.row logo-with-text:
@@ -79,9 +103,6 @@ placeholder: $title
 background-color: $fpm.color.main.background.base
 border-color: $fpm.color.main.text
 
---- ftd.text: $title
-role: $fpm.type.label-big
-color: $fpm.color.main.text-strong
 
 
 
@@ -145,22 +166,6 @@ role: $fpm.type.label-small
 
 --- container: ftd.main
 
---- pull-request:
-code-repo: $code-repo.repo-full-name
-doc-repo: $documentation-repo.repo-full-name
-
-
-
-
-
-
-
--- ftd.column pull-request:
-string  code-repo:
-string doc-repo:
-$on-click$: $code-repo-txt = $code-repo
-$on-click$: $doc-repo-txt = $code-repo
-
 --- ftd.text :&#707;
 role: $octicon
 link: /pull/
@@ -168,10 +173,6 @@ border-radius: 8
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-2
 background-color: $fpm.color.main.cta-primary.base
-
-
-
-
 
 
 
@@ -208,6 +209,7 @@ role: $fpm.type.label-small
 
 --- overview: Connect
 anchor: window
+outlines: $fpm.color.main.cta-primary.base
 repo-full-name: $repo-full-name
 repo-text: This Repo is a:
 
@@ -219,10 +221,6 @@ about-repo-left: Code Repository:
 about-repo-right: Documentation Repository:
 heading-name-right: Attach Documentation repository
 heading-name-left: Attach Code repository
-
-
-
-
 
 
 
@@ -267,9 +265,9 @@ string anchor:
 boolean open-1: false
 optional string repo-full-name:
 optional string repo-text:
-optional string about-repo:
 optional string repo-name:
-optional integer border-wi: 0
+optional ftd.color outlines: 
+integer border-wi: 0
 string text-align: left
 ftd.image-src cross-logo: $assets.files.assets.images.Union.png
 open: true
@@ -313,8 +311,8 @@ shadow-offset-y: 4
 shadow-blur: 2
 border-top: 1
 border-radius: 8
-border-color: $fpm.color.main.cta-primary.base
-shadow-color: $fpm.color.main.cta-primary.base
+border-color: $outlines
+shadow-color: $outlines
 id: model-content
 
 --- ftd.row:
@@ -333,35 +331,12 @@ $on-click$: $open-1 = false
 
 --- container: model-content
 
---- ftd.text: $repo-text
-if: $repo-text is not null
-padding-top: $fpm.space.space-4
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
-width: fill
-
-
-
---- container: model-content
-
 
 --- ftd.text: $repo-name
 if: $repo-name is not null
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 width: fill
-
---- container: model-content
-
---- ftd.row:
-width: fill
-
---- ftd.text: $about-repo
-if: $about-repo is not null
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
-width: fill
-
 
 --- container: model-content
 
@@ -415,8 +390,6 @@ open: true
 width: fill
 append-at: selected-repo
 
---- ftd.row:
-width: fill
 
 --- ftd.input: $selected-repo-name
 cursor: pointer
@@ -567,10 +540,6 @@ padding-top: $fpm.space.space-7
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 width: fill
-
---- ftd.row:
-width: fill
-padding-right: $fpm.space.space-7
 
 --- select-repo: search
 available-repos-for-mapping: $config.available-repos-for-mapping
